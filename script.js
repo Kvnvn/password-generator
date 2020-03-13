@@ -6,18 +6,31 @@ var generateBtn = document.querySelector("#generate");
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var special = ["!", "#", "$", "%", "&", "'", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var numberChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 // When the user clicks generate
 generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
   // prompt user for number of chars
-  var passwordLength = prompt("How many characters do you want the password to be?");
+  var passwordLength = prompt("How many characters do you want the password to contain?");
   // save result in variable called passwordLength
-  if (7 < passwordLength)
-    var lowerCase = confirm("did you want to use lowercase?");
-  else if (passwordLength < 129) alert("max characters is 129")
+  if (7 < passwordLength && passwordLength <129) {
+  var lowerCase = confirm("did you want to use Lowercase?");
+  var upperCase = confirm("did you want to use Uppercase?");
+  var special = confirm("did you want to use Special characters?");
+  var number = confirm("did you want to use Numbers?");
+  }
+  else {
+    alert("Password must be within 8 to 128 characters");
+  }
+};
 
+  //else if (passwordLength < 129) {
+  //var lowerCase = confirm("did you want to use Lowercase?");
+  //var upperCase = confirm("did you want to use Uppercase?");
+  //var special = confirm("did you want to use Special characters?");
+  //var number = confirm("did you want to use Numbers?");
+  
 //psuedo startup help
 // var passwordText = document.querySelector("#password");
 // passwordText.value = password;
