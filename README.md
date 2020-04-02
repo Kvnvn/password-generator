@@ -16,5 +16,5 @@ Series of question is prompted with asking for
 after user picks if else statements with compile the user input and generate
 
 #PageSource
-UrL:https://github.com/Kvnvn/coding-quiz
-GitHub:https://github.com/Kvnvn/coding-quiz
+UrL:https://github.com/Kvnvn/password-generator
+GitHub:https://kvnvn.github.io/password-generator/
