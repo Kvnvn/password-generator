@@ -17,7 +17,7 @@ function writePassword() {
 
 function generatePassword () {
   // prompt user for number of chars
-  var passwordLength = prompt("How many characters do you want the password to contain?");
+  var passwordLength = prompt("How many characters do you want the password to contain?(min. 8 characters)");
   // save result in variable called passwordLength
 
   //ask if q's in order to get conditions for password generator 
